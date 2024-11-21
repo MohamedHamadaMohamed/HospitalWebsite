@@ -1,0 +1,26 @@
+﻿@model int
+<h1>Complete Appoitment with @ViewData["Doctorname"]</h1>
+<form action="/Patient/CreateNewPatient">
+    <div class="form-group">
+        <label for="PatientName">Patient Name</label>
+        <input required type="text" class="form-control" id="PatientName" aria-describedby="emailHelp" name="name" placeholder="patient Name">
+    </div>
+    
+    <div class="form-group">
+        <label for="AppoitmentDate">Appoitment Date</label>
+        <input required type="date" class="form-control" id="AppoitmentDate" name="date" aria-describedby="emailHelp" placeholder="Appoitment Date">
+    </div>
+
+    <div class="form-group ">
+        <label for="AppoitmentTime">Appoitment Time</label>
+        <input required type="time" class="form-control" id="AppoitmentTime" name="time" aria-describedby="emailHelp" placeholder="Appoitment Time">
+    </div>
+
+    <div class="form-group ">
+        <input type="hidden" class="form-control" id="doctorId" name="doctorId" value=@Model aria-describedby="emailHelp" >
+    </div>
+
+    <button type="submit" class="btn btn-primary"  mt-2">Submit</button>
+     
+</form>
+
